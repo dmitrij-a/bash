@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+    <a href="{{ url_for('add_entry') }}"> Получить новости с Bash </a>
+    <ul class=entries>
+        {% for entry in entries %}
+            <li>{{ entry.post|safe }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
